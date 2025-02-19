@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryBackground: #543e5b;
+  --secondaryBackground: #36fbfb;
+  --primaryColor: #a8e00d;
+  --greyDark: #007bff;
+  --headingColor: #060606;
+  --white: #613bea;
+  --black: #000;
+  --sliver: #00e5ff;
+}
+body {
+  background-color: var(--headingColor);
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+a {
+  color: var(--greyDark);
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  color: var(--primaryColor);
+}
+p {
+  color: var(--sliver);
+  font-size: 15px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+.flexsb {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 17px;
+  background-color: var(--primaryColor);
+  color: var(--white);
+  padding: 15px 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.fontSize {
+  font-size: 20px;
+}
+.primaryBtn {
+  background: none;
+  border: 2px solid var(--primaryColor);
+}
+/*---------header-------------*/
+header {
+  background-color: var(--headingColor);
+  height: 10vh;
+  line-height: 10vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+header a {
+  margin-left: 40px;
+}
+.toggle {
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .nav {
+    display: none;
+  }
+  header a {
+    width: 100%;
+    display: block;
+    color: var(--white);
+  }
+  .toggle {
+    display: block;
+    font-size: 25px;
+    background: none;
+  }
+  .hideMenu {
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: var(--headingColor);
+  }
+}
+/*---------header-------------*/
+section {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+
+/*---------hero-------------*/
+.hero {
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../public/images/bj4.gif");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 90vh;
+}
+.heroContent {
+  max-width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+
+/*---------hero-------------*/
+.heading {
+  font-size: 30px;
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/*---------about-------------*/
+.about .primaryBtn {
+  margin-left: 20px;
+}
+.about .heading {
+  text-align: left;
+  margin: 0;
+}
+.left {
+  width: 50%;
+}
+.right {
+  width: 65%;
+}
+
+/*---------about-------------*/
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+       margin: -5px 0px px 24px;
+}
+
+/*---------services-------------*/
+.services .box {
+  background-color: var(--primaryBackground);
+  padding: 35px;
+}
+.services i {
+  color: var(--primaryColor);
+}
+.services h3 {
+  margin-top: 20px;
+}
+/*---------services-------------*/
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+  height: 50vh;
+  place-items: center;
+  text-align: center;
+}
+
+/*---------counter-------------*/
+.counter {
+  margin-top: 80px;
+  position: relative;
+}
+.hero.counter::after {
+  background-image: url("../public/images/bj2r.gif");
+  height: 50vh;
+}
+.counter h1 {
+  margin: 0;
+}
+/*---------counter-------------*/
+/*---------portfolio-------------*/
+
+article {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+article img {
+  width: 100%;
+  height: 100%;
+}
+article .box {
+  position: relative;
+  transition: 0.5s;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 2;
+}
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+article .box:hover .overlay::after,
+article .box:hover .overlay {
+  opacity: 1;
+}
+.catButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.catButton button {
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+/*---------portfolio-------------*/
+/*---------testimonials-------------*/
+.testimonials {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.testimonials::after {
+  background-image: url("../public/images/images/llip.gif");
+}
+.testimonials .box {
+  max-width: 60%;
+}
+.testimonials i {
+  background-color: var(--white);
+  font-size: 20px;
+  padding: 15px;
+  margin: 30px 0;
+  display: inline-block;
+  color: var(--primaryColor);
+}
+.testimonials .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid var(--primaryColor);
+}
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  object-fit: cover;
+}
+label {
+  color: var(--primaryColor);
+  margin: 10px 0;
+  display: inline-block;
+}
+/*---------testimonials-------------*/
+/*---------blog-------------*/
+.blog img {
+  width: 50%;
+}
+.blog .box {
+  background-color: var(--primaryBackground);
+  border-radius: 4px;
+}
+.blog .text {
+  padding: 6px 10px;
+}
+/*---------blog-------------*/
+/*---------contact-------------*/
+.contact {
+  margin: 20px 0;
+}
+.contact .right,
+.contact .left {
+  padding: 20px;
+}
+.contact .flex input:nth-child(1) {
+  margin-right: 10px;
+}
+.contact button,
+.contact textarea,
+.contact input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+/*---------contact-------------*/
+/*---------footer-------------*/
+footer {
+  text-align: center;
+  background-color: var(--primaryBackground);
+  padding: 70px;
+  margin-top: 50px;
+}
+footer i {
+  margin: 5px;
+  color: var(--primaryColor);
+}
+/*---------footer-------------*/
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .heroContent {
+    max-width: 80%;
+  }
+
+  .hero::after {
+    background-image: url("../public/images/bj2.jpg");
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+  }
+  section {
+    height: auto;
+    padding-top: 30px;
+  }
+  .contact .flexsb,
+  .about .flex {
+    flex-direction: column;
+  }
+  .right,
+  .left {
+    width: 100%;
+  }
+  .grid4,
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  article {
+    margin: 0;
+    padding-bottom: 50px;
+  }
+}
+/*---------contact-------------*/
+.contact {
+  margin: 20px 0;
+  padding: 50px; /* Added padding here */
+}
+
+.contact .right,
+.contact .left {
+  padding: 20px;
+}
+
+/* ... rest of your contact CSS ... */
+
+
+.contact {
+  padding: 100px 60px 60px; /* Adjusted padding - more top, some side */
+}
+
+.heading {
+  margin-bottom: 12px; /* Increased margin below heading */
+}
+
+.input-space {
+  margin-bottom: 20px; /* Increased margin between inputs */
+  width: calc(100% - 10px);
+}
+
+.flex .input-space {
+  width: calc(50% - 15px); /* Adjusted for flexbox inputs */
+}
+
+.input-space:not(.flex input), .input-space[type="text"] {
+  width: calc(100% - 10px);
+}
+
+.submit-button {
+  margin-top: 20px; /* Increased margin above button */
+  padding: 12px 25px; /* Slightly adjusted button padding */
+  background-color: var(--primaryColor);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Example: Added font-size */
+}
+
+
+
+
+
+.contact-text {
+  margin-bottom: 8px; /* Increased margin between text lines */
+  color: var(--sliver);
+  font-size: 16px; /* Example: Added font-size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact {
+      padding: 60px 25px 25px; /* Adjusted padding */
+  }
+
+  .flex .input-space, .input-space:not(.flex input), .input-space[type="text"] {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .submit-button {
+      font-size: 14px; /* Example: Adjusted font-size */
+  }
+
+  .contact-icon {
+      font-size: 18px; /* Example: Adjusted font-size */
+  }
+
+  .contact-text {
+      font-size: 14px; /* Example: Adjusted font-size */
+  }
+}
+/* In your CSS file (e.g., About.css or main.css) */
+
+.about {
+  position: relative; /* Needed for absolute positioning of background */
+  overflow: hidden; /* Prevents background image from overflowing */
+}
+
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Places background behind content */
+  background-image: url("../public/images/About.gif"); /* Replace with your image URL */
+  background-size: cover; /* Or contain, depending on your needs */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  background-position: center; /* Centers the image */
+  /* Add a subtle overlay if needed for better text contrast */
+  /* background-color: rgba(0, 0, 0, 0.2);  Example overlay */
+  opacity: 0.7; /* Example opacity */
+}
+
+.about .container { /* Adjust container styles if needed */
+  /* Example: Add some padding to prevent content from touching edges */
+  padding: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about .container {
+      padding: 40px; /* Adjust padding for smaller screens */
+  }
+}
+/* In your CSS file (e.g., Services.css or main.css) */
+
+.services {
+    position: relative; /* Needed for absolute positioning of background */
+    overflow: hidden; /* Prevents background from overflowing */
+}
+
+.services-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places background behind content */
+    background-image: url("../public/images/services.gif"); /* Replace with your image URL */
+    background-size: cover; /* Or contain, depending on your needs */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6; /* Adjust as needed */
+    /* Example overlay with color */
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+
+.services .container {
+    padding: 80px; /* Adjust padding as needed */
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.8); /* Example: Semi-transparent white box */
+    padding: 13px 30px 0px 30px;
+    border-radius: 8px; /* Example: Rounded corners */
+    text-align: center; /* Center the content within the box */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Move box up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
+
+.service-icon { /* Style the icon */
+    font-size: 40px; /* Adjust as needed */
+    margin-bottom: 20px;
+    color: var(--primaryColor); /* Or your icon color */
+}
+
+.box h3 {
+    margin-bottom: 15px;
+    color: var(--headingColor); /* Or your heading color */
+}
+
+.box p {
+    color: var(--sliver); /* Or your text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services .container {
+        padding: 40px; /* Adjust padding for smaller screens */
+    }
+    .grid3 {
+        grid-template-columns: repeat(1, 1fr); /* Stack boxes vertically on smaller screens */
+    }
+    .box {
+        padding: 20px;
+    }
+    .service-icon {
+        font-size: 30px;
+    }
+}
+
+.portfolio {
+  position: relative; /* Needed for absolute positioning of background */
+  overflow: hidden; /* Prevents background from overflowing */
+}
+
+.portfolio-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Places background behind content */
+  background-image: url("../public/images/portfolio.gif"); /* **REPLACE THIS** */
+  background-size: cover; /* Or contain, depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7; /* Adjust as needed */
+  
+}
+
+.portfolio .container {
+  padding: 80px; /* Adjust padding as needed */
+}
+
+/* ... other portfolio styles ... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio .container {
+      padding: 40px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Add styles for .box, .img, .overlay, etc. as needed */
+.box {
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden; /* Hide overflowing overlay content */
+}
+
+.img {
+  width: 100%; /* Make image responsive */
+  display: block; /* Prevent small space below image */
+}
+
+.img img {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.box:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+.overlay h3 {
+  margin-bottom: 10px;
+}
+
+
+
