@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Vinayportfolio_1/static/css/main.f04ab09a.css",
+    "main.js": "/Vinayportfolio_1/static/js/main.c2e84691.js",
+    "static/media/services.gif": "/Vinayportfolio_1/static/media/services.bdce91a153daf5afec36.gif",
+    "static/media/About.gif": "/Vinayportfolio_1/static/media/About.69015d49dc731fc4dea0.gif",
+    "static/media/bj4.gif": "/Vinayportfolio_1/static/media/bj4.aacacd6f2df849b94d6e.gif",
+    "static/media/llip.gif": "/Vinayportfolio_1/static/media/llip.d3f7e3df017149699b5a.gif",
+    "static/media/bj2r.gif": "/Vinayportfolio_1/static/media/bj2r.1c30c62746a49d60ff17.gif",
+    "static/media/portfolio.gif": "/Vinayportfolio_1/static/media/portfolio.e1023a17e7bf10fb96fe.gif",
+    "static/media/bj2.jpg": "/Vinayportfolio_1/static/media/bj2.94a2b5923c7d9e8b0ad2.jpg",
+    "static/media/slick.svg": "/Vinayportfolio_1/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Vinayportfolio_1/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Vinayportfolio_1/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Vinayportfolio_1/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Vinayportfolio_1/index.html",
+    "main.f04ab09a.css.map": "/Vinayportfolio_1/static/css/main.f04ab09a.css.map",
+    "main.c2e84691.js.map": "/Vinayportfolio_1/static/js/main.c2e84691.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f04ab09a.css",
+    "static/js/main.c2e84691.js"
+  ]
+}
